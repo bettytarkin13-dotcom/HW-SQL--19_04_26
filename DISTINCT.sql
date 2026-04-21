@@ -29,5 +29,5 @@ SELECT DISTINCT genre,language
 FROM movies_1
 ORDER BY genre,language;
 
-SELECT count (DISTINCT genre)
+SELECT COUNT(DISTINCT genre)
 FROM movies_1;
