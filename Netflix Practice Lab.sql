@@ -10,10 +10,10 @@ WHERE type = 'Movie'
   AND TRIM("cast") !=''
   LIMIT 20;
 
-SELECT DISTINCT "cast"
+SELECT title, rating
 FROM "netflix_movies_detailed_up_to_2025 22"
 WHERE type = 'Movie'
- AND genres like 'Action'
+ AND genres like '%Action%'
  AND release_year >= 2015
 ORDER BY release_year DESC 
 LIMIT 5; 
@@ -33,5 +33,5 @@ ORDER BY score DESC , movie ASC;
 SELECT title 
 FROM "netflix_movies_detailed_up_to_2025 22"
 WHERE type = 'Movie'
-  AND genres like 'Drama'
+  AND genres like '%Drama%'
   AND "cast" IS NULL;
